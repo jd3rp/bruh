@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Top menu -->
+
+    <header>
+        <nav id="top-menu" class="top-menu">
+            <button id="menu-item" data-section="home">Home</button>
+            <button id="menu-item" data-section="notes">Notes</button>
+            <button id="menu-item" data-section="tasks">Tasks</button>
+            <button id="menu-item" data-section="wallet">Wallet</button>
+        </nav>
+    </header>
+
+    <!-- Main UI (dependant on top menu) -->
+    <main>
+        <section id="main-content">
+            <h1>Hello from Electron</h1>
+            <p>Your organizational app is ready to go!</p>
+        </section>
+    </main>
+
+    <footer>
+        <button id="main-btn" class="main-btn">+</button>
+        <nav id="radial-menu" class="radial-hidden"></nav>
+    </footer>
+
+    <script src="renderer.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

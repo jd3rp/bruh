@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ff34dab7-f2aa-4ac8-848a-2fef6dad7ae7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>src\app.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -28,9 +28,25 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.js" />
+    <Content Include=".babelrc" />
+    <Content Include=".env" />
+    <Content Include="components\task management\goalTracking.js" />
+    <Content Include="components\task management\tasksManagement.js" />
+    <Content Include="pages\tasks.html" />
+    <Content Include="public\index.html" />
+    <Content Include="public\styles.css" />
+    <Content Include="src\app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\renderer.js" />
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="components\" />
+    <Folder Include="components\task management\" />
+    <Folder Include="pages\" />
+    <Folder Include="public\" />
+    <Folder Include="src\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>

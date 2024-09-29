@@ -44,25 +44,34 @@ footer {
 }
 
 .main-btn {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1000;
+    padding: 20px;
     background-color: #007bff;
     color: white;
-    border: none;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
+    border: none;
     cursor: pointer;
+    font-size: 24px;
 }
 
 .radial-menu {
-    position: absolute;
-    bottom: 80px;
+    position: fixed;
+    bottom: 80px; /* Adjust based on the button's position */
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none; /* Initially hidden */
+    z-index: 999;
 }
+
+    .radial-menu.show {
+        display: block; /* Show when the class 'show' is added */
+    }
+
+
 
 .menu-btn {
     background-color: #28a745;

@@ -1,0 +1,44 @@
+<!-- tasks.html -->
+<section id="tasks-section" class="tasks-section">
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+
+    <!-- Form to add new tasks -->
+    <form id="task-form">
+        <fieldset>
+            <legend>Add a New Task</legend>
+            <label for="new-task-input">Task Name:</label>
+            <input type="text" id="new-task-input" placeholder="Enter your task..." required />
+
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </fieldset>
+    </form>
+
+    <!-- List of pending tasks -->
+    <section>
+        <header>
+            <h2>Pending Tasks</h2>
+        </header>
+        <ul id="pending-tasks" class="task-list">
+            <!-- Dynamic list of tasks will be inserted here -->
+        </ul>
+    </section>
+
+    <!-- List of completed tasks -->
+    <section>
+        <header>
+            <h2>Completed Tasks</h2>
+        </header>
+        <ul id="completed-tasks" class="task-list">
+            <!-- Completed tasks will be moved here -->
+        </ul>
+    </section>
+</section>

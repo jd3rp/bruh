@@ -38,8 +38,10 @@
     <Content Include="src\app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="src\preload.js" />
     <Content Include="src\renderer.js" />
-    <Content Include="webpack.config.js" />
+    <Content Include="webpack.renderer.config.js" />
+    <Content Include="webpack.main.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="components\" />

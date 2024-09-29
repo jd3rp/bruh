@@ -1,15 +1,16 @@
+// webpack.renderer.config.js
 const path = require('path');
 
 module.exports = {
-    entry: './src/app.js',  // Entry point for the main process
+    entry: './src/renderer.js',  // Entry point for the renderer process
     output: {
-        filename: 'bundle.js',  // The bundled JS file name
-        path: path.resolve(__dirname, 'dist'),  // Output directory
+        filename: 'renderer.bundle.js',  // Output for the renderer process
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
             {
-                test: /\.js$/,  // Apply Babel to JS files
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -20,5 +21,5 @@ module.exports = {
             }
         ]
     },
-    target: 'electron-main',  // Target Electron's main process
+    target: 'electron-renderer',  // Target the renderer process
 };

@@ -6,13 +6,25 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            nodeIntegration: false,  // for security reasons
-            contextIsolation: true,  // to isolate the context between browser and main processes
-            preload: path.join(__dirname, 'preload.js')  // to allow limited, secure access to Node.js
+            nodeIntegration: false,   // Disable nodeIntegration for security
+            contextIsolation: true,   // Enable context isolation
+            preload: path.join(__dirname, 'preload.js')  // Preload script for secure Node.js interaction
         }
     });
 
-    win.loadFile('public/index.html');  // Load your HTML file
+    win.loadFile('public/index.html');  // Load the renderer content
 }
 
 app.whenReady().then(createWindow);
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
+});
+
+app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+    }
+});
